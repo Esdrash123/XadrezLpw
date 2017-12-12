@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+
+
+        <link rel="stylesheet" href="style.css">
+
+
+    </head>
+
+    <body onload="jogo();">
+
+      <!--  <div id="fundo"></div>
+        <div id="escolhecor-inicio" class="escolhe">
+            <div onclick="escolhecor_incio('branco');">&#9812;</div>
+            <div onclick="escolhecor_incio('preto');">&#9818;</div>
+
+
+        </div>
+        <div id="escolhebranco" class="escolhe">
+            <div onclick="escolhe('rainha', 'branco');">&#9813;</div>
+            <div onclick="escolhe('torre', 'branco');">&#9814;</div>
+            <div onclick="escolhe('cavalo', 'branco');">&#9816;</div>
+            <div onclick="escolhe('bispo', 'branco');">&#9815;</div>
+        </div>
+
+        <div id="escolhepreto" class="escolhe">
+            <div onclick="escolhe('rainha', 'preto');">&#9819;</div>
+            <div onclick="escolhe('torre', 'preto');">&#9820;</div>
+            <div onclick="escolhe('cavalo', 'preto');">&#9822;</div>
+            <div onclick="escolhe('bispo', 'preto');">&#9821;</div>
+        </div>
+      -->
+
+        <div id="tabuleiro">
+            <div id="p11" onclick="seleciona(1, 1);"></div>	
+            <div id="p12" onclick="seleciona(1, 2);"></div>
+            <div id="p13" onclick="seleciona(1, 3);"></div>	
+            <div id="p14" onclick="seleciona(1, 4);"></div>
+            <div id="p15" onclick="seleciona(1, 5);"></div>	
+            <div id="p16" onclick="seleciona(1, 6);"></div>
+            <div id="p17" onclick="seleciona(1, 7);"></div>	
+            <div id="p18" onclick="seleciona(1, 8);"></div>
+
+            <div id="p21" onclick="seleciona(2, 1);"></div>	
+            <div id="p22" onclick="seleciona(2, 2);"></div>
+            <div id="p23" onclick="seleciona(2, 3);"></div>	
+            <div id="p24" onclick="seleciona(2, 4);"></div>
+            <div id="p25" onclick="seleciona(2, 5);"></div>	
+            <div id="p26" onclick="seleciona(2, 6);"></div>
+            <div id="p27" onclick="seleciona(2, 7);"></div>	
+            <div id="p28" onclick="seleciona(2, 8);"></div>
+
+            <div id="p31" onclick="seleciona(3, 1);"></div>	
+            <div id="p32" onclick="seleciona(3, 2);"></div>
+            <div id="p33" onclick="seleciona(3, 3);"></div>	
+            <div id="p34" onclick="seleciona(3, 4);"></div>
+            <div id="p35" onclick="seleciona(3, 5);"></div>	
+            <div id="p36" onclick="seleciona(3, 6);"></div>
+            <div id="p37" onclick="seleciona(3, 7);"></div>	
+            <div id="p38" onclick="seleciona(3, 8);"></div>
+
+            <div id="p41" onclick="seleciona(4, 1);"></div>	
+            <div id="p42" onclick="seleciona(4, 2);"></div>
+            <div id="p43" onclick="seleciona(4, 3);"></div>	
+            <div id="p44" onclick="seleciona(4, 4);"></div>
+            <div id="p45" onclick="seleciona(4, 5);"></div>	
+            <div id="p46" onclick="seleciona(4, 6);"></div>
+            <div id="p47" onclick="seleciona(4, 7);"></div>	
+            <div id="p48" onclick="seleciona(4, 8);"></div>
+
+            <div id="p51" onclick="seleciona(5, 1);"></div>	
+            <div id="p52" onclick="seleciona(5, 2);"></div>
+            <div id="p53" onclick="seleciona(5, 3);"></div>	
+            <div id="p54" onclick="seleciona(5, 4);"></div>
+            <div id="p55" onclick="seleciona(5, 5);"></div>	
+            <div id="p56" onclick="seleciona(5, 6);"></div>
+            <div id="p57" onclick="seleciona(5, 7);"></div>	
+            <div id="p58" onclick="seleciona(5, 8);"></div>
+
+            <div id="p61" onclick="seleciona(6, 1);"></div>	
+            <div id="p62" onclick="seleciona(6, 2);"></div>
+            <div id="p63" onclick="seleciona(6, 3);"></div>	
+            <div id="p64" onclick="seleciona(6, 4);"></div>
+            <div id="p65" onclick="seleciona(6, 5);"></div>	
+            <div id="p66" onclick="seleciona(6, 6);"></div>
+            <div id="p67" onclick="seleciona(6, 7);"></div>	
+            <div id="p68" onclick="seleciona(6, 8);"></div>
+
+            <div id="p71" onclick="seleciona(7, 1);"></div>	
+            <div id="p72" onclick="seleciona(7, 2);"></div>
+            <div id="p73" onclick="seleciona(7, 3);"></div>	
+            <div id="p74" onclick="seleciona(7, 4);"></div>
+            <div id="p75" onclick="seleciona(7, 5);"></div>	
+            <div id="p76" onclick="seleciona(7, 6);"></div>
+            <div id="p77" onclick="seleciona(7, 7);"></div>	
+            <div id="p78" onclick="seleciona(7, 8);"></div>
+
+            <div id="p81" onclick="seleciona(8, 1);"></div>	
+            <div id="p82" onclick="seleciona(8, 2);"></div>
+            <div id="p83" onclick="seleciona(8, 3);"></div>	
+            <div id="p84" onclick="seleciona(8, 4);"></div>
+            <div id="p85" onclick="seleciona(8, 5);"></div>	
+            <div id="p86" onclick="seleciona(8, 6);"></div>
+            <div id="p87" onclick="seleciona(8, 7);"></div>	
+            <div id="p88" onclick="seleciona(8, 8);"></div>
+
+        </div>
+        <script  src="js.js"></script>
+    </body>
+</html>
